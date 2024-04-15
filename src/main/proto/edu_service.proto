@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.eduservice";
+option java_outer_classname = "EduServiceProto";
+
+package eduservice;
+
+service EduService {
+  rpc GetCostByParams (GetCostByParamsRequest) returns (GetCostByParamsResponse);
+  rpc GetTop5MostExpensiveStates (GetTop5MostExpensiveStatesRequest) returns (GetTop5MostExpensiveStatesResponse);
+  rpc GetTop5MostEconomicalStates (GetTop5MostEconomicalStatesRequest) returns (GetTop5MostEconomicalStatesResponse);
+  rpc GetTop5GrowthRateStates (GetTop5GrowthRateStatesRequest) returns (GetTop5GrowthRateStatesResponse);
+  rpc GetRegionAvgExpense (GetRegionAvgExpenseRequest) returns (GetRegionAvgExpenseResponse);
+}
+
+message GetCostByParamsRequest {
+  int32 Year = 1;
+  string State = 2;
+  string Type = 3;
+  string Length = 4;
+  string Expense = 5;
+}
+
+message GetCostByParamsResponse {
+  double cost = 1;
+  string error = 2;
+}
+
+message GetTop5MostExpensiveStatesRequest {
+  int32 year = 1;
+  string type = 2;
+  string length = 3;
+}
+
+message GetTop5MostExpensiveStatesResponse {
+  repeated StateExpense stateExpenses = 1;
+}
+
+message GetTop5MostEconomicalStatesRequest {
+  int32 year = 1;
+  string type = 2;
+  string length = 3;
+}
+
+message GetTop5MostEconomicalStatesResponse {
+  repeated StateExpense stateExpenses = 1;
+}
+
+message GetTop5GrowthRateStatesRequest {
+  int32 baseYear = 1;
+  string type = 2;
+  string length = 3;
+  int32 range = 4;
+}
+
+message GetTop5GrowthRateStatesResponse {
+  repeated StateGrowthRate stateGrowthRates = 1;
+}
+
+message GetRegionAvgExpenseRequest {
+  int32 year = 1;
+  string type = 2;
+  string length = 3;
+}
+
+message GetRegionAvgExpenseResponse {
+  repeated RegionAverage regionAverages = 1;
+}
+
+message StateExpense {
+  string state = 1;
+  double expense = 2;
+}
+
+message StateGrowthRate {
+  string state = 1;
+  double growthRate = 2;
+}
+
+message RegionAverage {
+  string region = 1;
+  double averageExpense = 2;
+}

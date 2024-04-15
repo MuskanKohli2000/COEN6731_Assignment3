@@ -1,0 +1,60 @@
+package com.example.eduservice;
+
+import java.util.Map;
+
+public class RegionUtils {
+	public static final Map<String, String> STATE_TO_REGION = Map.ofEntries(
+	        Map.entry("Alabama", "SouthEast"),
+	        Map.entry("Arkansas", "SouthWest"),
+	        Map.entry("Connecticut", "NorthEast"),
+	        Map.entry("Delaware", "NorthEast"),
+	        Map.entry("Florida", "SouthEast"),
+	        Map.entry("Georgia", "SouthEast"),
+	        Map.entry("Illinois", "Midwest"),
+	        Map.entry("Indiana", "Midwest"),
+	        Map.entry("Iowa", "Midwest"),
+	        Map.entry("Kansas", "Midwest"),
+	        Map.entry("Kentucky", "SouthEast"),
+	        Map.entry("Louisiana", "SouthWest"),
+	        Map.entry("Maine", "NorthEast"),
+	        Map.entry("Maryland", "NorthEast"),
+	        Map.entry("Massachusetts", "NorthEast"),
+	        Map.entry("Michigan", "Midwest"),
+	        Map.entry("Minnesota", "Midwest"),
+	        Map.entry("Mississippi", "SouthEast"),
+	        Map.entry("Missouri", "Midwest"),
+	        Map.entry("Nebraska", "Midwest"),
+	        Map.entry("New Hampshire", "NorthEast"),
+	        Map.entry("New Jersey", "NorthEast"),
+	        Map.entry("New York", "NorthEast"),
+	        Map.entry("North Carolina", "SouthEast"),
+	        Map.entry("North Dakota", "Midwest"),
+	        Map.entry("Ohio", "Midwest"),
+	        Map.entry("Oklahoma", "SouthWest"),
+	        Map.entry("Pennsylvania", "NorthEast"),
+	        Map.entry("Rhode Island", "NorthEast"),
+	        Map.entry("South Carolina", "SouthEast"),
+	        Map.entry("South Dakota", "Midwest"),
+	        Map.entry("Tennessee", "SouthEast"),
+	        Map.entry("Texas", "SouthWest"),
+	        Map.entry("Vermont", "NorthEast"),
+	        Map.entry("Virginia", "SouthEast"),
+	        Map.entry("West Virginia", "SouthEast"),
+	        Map.entry("Wisconsin", "Midwest"),
+	        Map.entry("Arizona", "West"),
+	        Map.entry("California", "West"),
+	        Map.entry("Colorado", "West"),
+	        Map.entry("Hawaii", "West"),
+	        Map.entry("Idaho", "West"),
+	        Map.entry("Montana", "West"),
+	        Map.entry("Nevada", "West"),
+	        Map.entry("New Mexico", "West"),
+	        Map.entry("Oregon", "West"),
+	        Map.entry("Utah", "West"),
+	        Map.entry("Washington", "West"),
+	        Map.entry("Wyoming", "West"),
+	        Map.entry("District of Columbia", "NorthEast")
+	    );
+	
+	private RegionUtils() {}
+}
